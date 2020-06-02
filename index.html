@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
@@ -16,16 +17,12 @@
                 <div class="sort_by">
                     <div class="sort_by_id sort_item checked"><span>ID</span></div>
                     <div class="sort_by_name sort_item "><span>Имя</span></div>
+                    <input class="sort_by_name hidden" type="text" placeholder="Введите имя...">
                     <div class="sort_by_age sort_item "><span>Возраст</span></div>
-                    <!-- <input class="sort_by_id" type="button" value="ID">
-                    <input class="sort_by_name" type="text" value="Имя">
-                    <input class="sort_by_age" type="button" value="Возраст"> -->
                 </div>
                 <div class="sort_by_asc_desc">
                     <div class="sort_by_ascending checked"><span>По возрастанию</span></div>
                     <div class="sort_by_descending"><span>По убыванию</span></div>
-                    <!-- <input class="sort_by_asscending" type="button" value="По возрастанию">
-                    <input class="sort_by_descending" type="button" value="По убыванию"> -->
                 </div>
             </div>
             <div class="appearance">
@@ -106,7 +103,7 @@
             </div>
         </div>
         <!-- section prewiew -->
-        <div class="main_section_preview ">
+        <div class="main_section_preview hidden">
             <div class="object_wrapper has_video">
                 <div class="preview_person">
                     <div class="person_header">
@@ -126,7 +123,9 @@
                     </div>
                 </div>
                 <div class="preview_video">
-                    <iframe class="video" src="videos/shoe.mp4" frameborder="0"></iframe>
+                    <video class="video" width="320px" height="250px" controls>
+                        <source src="videos/shoe.mp4">
+                    </video>
                 </div>
             </div>
             <div class="object_wrapper">
@@ -181,12 +180,15 @@
                     <span>30 лет</span>
                     <span>(415) 670-6901</span>
                     <div class="preview_person_info">
-                        <span>Japman somam mes lizmasapa om zefopi ki wa oglu mofajnr denba uc famoso opeju                        <span>Japman somam mes lizmasapa om zefopi ki wa oglu mofajnr denba uc famoso opeju
-                            woul.</span>
+                        <span>Japman somam mes lizmasapa om zefopi ki wa oglu mofajnr denba uc famoso opeju <span>Japman
+                                somam mes lizmasapa om zefopi ki wa oglu mofajnr denba uc famoso opeju
+                                woul.</span>
                     </div>
                 </div>
                 <div class="preview_video">
-                    <iframe class="video" src="videos/boy.mp4" frameborder="0"></iframe>
+                    <video class="video" width="320px" height="250px" controls>
+                        <source src="videos/boy.mp4">
+                    </video>
                 </div>
             </div>
         </div>
