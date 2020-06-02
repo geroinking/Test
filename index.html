@@ -16,8 +16,8 @@
                 <span class="header_title">Сортировка</span>
                 <div class="sort_by">
                     <div class="sort_by_id sort_item checked"><span>ID</span></div>
-                    <div class="sort_by_name sort_item "><span>Имя</span></div>
-                    <input class="sort_by_name hidden" type="text" placeholder="Введите имя...">
+                    <div class="sort_by_name sort_item  "><span class="name">Имя</span></div>
+                    <input class="input_name hidden" type="text" placeholder="Введите имя...">
                     <div class="sort_by_age sort_item "><span>Возраст</span></div>
                 </div>
                 <div class="sort_by_asc_desc">
@@ -28,14 +28,14 @@
             <div class="appearance">
                 <span class="header_title">Вид</span>
                 <div class="appearance_table">
-                    <div class="table_view appearance_item checked"><span>Таблица</span></div>
-                    <div class="preview appearance_item"><span>Превью</span></div>
+                    <div onclick="getTableData()" class="table_view appearance_item checked"><span>Таблица</span></div>
+                    <div onclick="getPreviewData()" class="preview appearance_item"><span>Превью</span></div>
                 </div>
             </div>
         </div>
         <!-- section table -->
         <div class="main_section_table">
-            <div class="person">
+            <!-- <div class="person">
                 <div class="person_name">
                     <img class="avatar" src="images/react.svg">
                     <span>Gilbert Morton</span>
@@ -100,11 +100,11 @@
                 <div>
                     <img class="star active" src="images/star.svg" alt="Add to favourite">
                 </div>
-            </div>
+            </div> -->
         </div>
         <!-- section prewiew -->
-        <div class="main_section_preview hidden">
-            <div class="object_wrapper has_video">
+        <div class="main_section_preview">
+            <!-- <div class="object_wrapper has_video">
                 <div class="preview_person">
                     <div class="person_header">
                         <div class="preview_avatar">
@@ -190,7 +190,7 @@
                         <source src="videos/boy.mp4">
                     </video>
                 </div>
-            </div>
+            </div> -->
         </div>
 
     </div>
