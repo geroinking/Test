@@ -366,12 +366,12 @@
     background-color: rgb(230, 230, 230);
 }
 
-.hidden {
-    display: none;
-}
-
 .shown {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+}
+
+.hidden {
+    display: none;
 }
