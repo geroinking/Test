@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 650px;
+    flex-wrap: wrap;
+}
+
+.sort {
+    display: flex;
+    flex-direction: column;
+}
+
+.header_title {
+    margin-bottom: 10px;
+}
+
+.sort_by {
+    display: flex;
+    width: 350px;
+    height: 30px;
+    border: 0.5px solid black;
+    margin-bottom: 10px;
+}
+
+.sort_item {
+    width: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sort_item>span {
+    transition: 0.5s;
+}
+
+.sort_item>span:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.sort_by_name {
+    border-left: 0.5px solid black;
+    border-right: 0.5px solid black;
+}
+
+.sort_by_asc_desc {
+    display: flex;
+    width: 350px;
+    height: 30px;
+    border: 0.5px solid black;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.sort_by_ascending {
+    border-right: 0.5px solid black;
+    width: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sort_by_ascending>span {
+    transition: 0.5s;
+}
+
+.sort_by_ascending>span:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.sort_by_descending>span {
+    transition: 0.5s;
+}
+
+.sort_by_descending>span:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.sort_by_descending {
+    width: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.appearance {
+    display: flex;
+    flex-direction: column;
+}
+
+.appearance_table {
+    display: flex;
+    height: 70px;
+    border: 0.5px solid black;
+    width: 250px;
+    justify-content: space-between;
+}
+
+.appearance_item {
+    width: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.appearance_item:hover {
+    cursor: pointer;
+}
+
+.appearance_item>span {
+    transition: 0.5s;
+}
+
+.appearance_item>span:hover {
+    transform: scale(1.1);
+}
+
+.table_view {
+    border-right: 0.5px solid black;
+}
+
+.main_section_table {
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.person {
+    height: 70px;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.5px solid rgba(128, 128, 128, 0.500);
+    padding: 0 10px;
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(219, 219, 219, 0.5);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(219, 219, 219, 0.5);
+    box-shadow: 0px 0px 10px 5px rgba(219, 219, 219, 0.5);
+    transition: 0.5s;
+}
+
+.person:hover {
+    transform: scale(1.01);
+}
+
+.person_name {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.star {
+    height: 20px;
+    width: 20px;
+    opacity: 10%;
+}
+
+.star:hover {
+    cursor: pointer;
+}
+
+.main_section_preview {
+    margin-top: 30px;
+    width: 650px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.object_wrapper {
+    margin: 0 5px 5px 0;
+    height: 250px;
+    width: 320px;
+    background-color: rgb(245, 245, 245);
+    -webkit-box-shadow: 0px 0px 3px 3px rgba(230, 227, 230, 1);
+    -moz-box-shadow: 0px 0px 3px 3px rgba(230, 227, 230, 1);
+    box-shadow: 0px 0px 3px 3px rgba(230, 227, 230, 1);
+    transition: 0.5s;
+}
+
+.object_wrapper:hover {
+    transform: scale(1.01);
+}
+
+.preview_person {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    padding: 0 10px;
+    width: 325px;
+}
+
+.person_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-self: flex-start;
+}
+
+.preview_avatar {
+    display: flex;
+    align-items: center;
+}
+
+.has_video {
+    width: 650px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.active {
+    opacity: 100%;
+}
+
+.checked {
+    background-color: rgb(230, 230, 230);
+}
