@@ -114,9 +114,6 @@ const renderPreview = (data) => {
     }
 }
 
-
-
-
 let showSearchField = event => {
     if (event.target.closest('.name') || event.target.closest('.input_name')) {
         nameSort.classList.add('hidden')
