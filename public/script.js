@@ -39,17 +39,14 @@ const declOfNum = (number, titles) => { // алгоритм склонения �
     return number + ' ' + titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
 };
 
-
 const passValueToState = () => { //передаём значение поля ввода в стейт
     state.inputValue = '';
     state.inputValue = inputName.value;
     searchByName();
-
-    console.log(state);
 };
 
 const initSearch = (tableFunc, previewFunc) => {
-    getData(`http://localhost:3000/users?q=${state.inputValue}`)
+    getData(`/users?q=${state.inputValue}`)
         .then((data) => {
             if (state.currentView === 'table') {
                 data.forEach(tableFunc);
@@ -78,20 +75,20 @@ const getSortedData = (event) => { //сортировка данных в зав
             if (state.currentView == 'table') {
                 table.innerHTML = '';
                 if (state.inputValue.length >= 3) {
-                    getData(`http://localhost:3000/users?q=${state.inputValue}&_sort=${state.currentSort}&_order=${state.currentSortType}`)
+                    getData(`/users?q=${state.inputValue}&_sort=${state.currentSort}&_order=${state.currentSortType}`)
                         .then((data) => data.forEach(renderTable))
                 } else {
-                    getData(`http://localhost:3000/users?_sort=${state.currentSort}&_order=${state.currentSortType}`)
+                    getData(`/users?_sort=${state.currentSort}&_order=${state.currentSortType}`)
                         .then((data) => data.forEach(renderTable))
                 }
             } else if (state.currentView == 'preview') {
                 preview.innerHTML = '';
                 if (state.inputValue.length >= 3) {
-                    getData(`http://localhost:3000/users?q=${state.inputValue}&_sort=${state.currentSort}&_order=${state.currentSortType}`)
+                    getData(`/users?q=${state.inputValue}&_sort=${state.currentSort}&_order=${state.currentSortType}`)
                         .then((data) => data.forEach(renderPreview))
                         .then(initAutoplay)
                 } else {
-                    getData(`http://localhost:3000/users?_sort=${state.currentSort}&_order=${state.currentSortType}`)
+                    getData(`/users?_sort=${state.currentSort}&_order=${state.currentSortType}`)
                         .then((data) => data.forEach(renderPreview))
                         .then(initAutoplay)
                 }
@@ -108,32 +105,30 @@ const getSortedData = (event) => { //сортировка данных в зав
             if (state.currentView == 'table') {
                 table.innerHTML = '';
                 if (state.inputValue.length >= 3) {
-                    getData(`http://localhost:3000/users?q=${state.inputValue}&_sort=${state.currentSort}&_order=${state.currentSortType}`)
+                    getData(`/users?q=${state.inputValue}&_sort=${state.currentSort}&_order=${state.currentSortType}`)
                         .then((data) => data.forEach(renderTableEng))
                 } else {
-                    getData(`http://localhost:3000/users?_sort=${state.currentSort}&_order=${state.currentSortType}`)
+                    getData(`/users?_sort=${state.currentSort}&_order=${state.currentSortType}`)
                         .then((data) => data.forEach(renderTableEng))
                 }
             } else if (state.currentView == 'preview') {
                 preview.innerHTML = '';
                 if (state.inputValue.length >= 3) {
-                    getData(`http://localhost:3000/users?q=${state.inputValue}&_sort=${state.currentSort}&_order=${state.currentSortType}`)
+                    getData(`/users?q=${state.inputValue}&_sort=${state.currentSort}&_order=${state.currentSortType}`)
                         .then((data) => data.forEach(renderPreviewEng))
                         .then(initAutoplay)
                 } else {
-                    getData(`http://localhost:3000/users?_sort=${state.currentSort}&_order=${state.currentSortType}`)
+                    getData(`/users?_sort=${state.currentSort}&_order=${state.currentSortType}`)
                         .then((data) => data.forEach(renderPreviewEng))
                         .then(initAutoplay);
                 }
             }
         }
     }
-    console.log(state);
-
 };
 
 const getTableData = () => {
-    getData('http://localhost:3000/users')
+    getData('/users')
         .then((data) => data.forEach(renderTable))
 };
 
@@ -313,7 +308,7 @@ const append = (createdElement, renderPlace) => { //вставляет новы�
 };
 
 
-const isInViewport = (elem) => {//проверяет находится ли элемент во вьюпорте
+const isInViewport = (elem) => { //проверяет находится ли элемент во вьюпорте
     let bounding = elem.getBoundingClientRect();
     return (
         bounding.top >= 0 &&
@@ -322,7 +317,7 @@ const isInViewport = (elem) => {//проверяет находится ли э�
         bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 };
-const initAutoplay = () => {// функционал автоплея
+const initAutoplay = () => { // функционал автоплея
     const videos = document.querySelectorAll('.video');
     videos[0].play();
     window.addEventListener('scroll', function (event) {
@@ -434,9 +429,6 @@ const changeLagnuage = () => {
         el.innerHTML = language[el.getAttribute('text')];
     })
 };
-
-console.log(state);
-
 
 const init = () => {
     document.addEventListener('click', subscribe);
