@@ -1,13 +1,14 @@
-Clone project
+# Clone project
 git clone https://github.com/geroinking/test.git
 
-Then change into that folder
+# Then change into that folder
 cd test
 
-Install dependencies
+# Install dependencies
 npm install
 
-Start fake REST API server
+# Run to start REST API fake server
 npm run json:server
 
-Open index.html# test
+# Open index.html
+npm start
