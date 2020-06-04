@@ -11,4 +11,3 @@ npm install
 npm run json:server
 
 # Open index.html
-npm start
