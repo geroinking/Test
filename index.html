@@ -6,31 +6,36 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 
 <body>
     <div class="wrapper">
         <div class="header">
+            
             <div class="sort">
-                <span class="header_title">Сортировка</span>
+                <span class="header_title" text="Sort"></span>
                 <div class="sort_by">
-                    <div class="sort_by_id sort_item checked"><span>ID</span></div>
-                    <div class="sort_by_name sort_item  "><span class="name">Имя</span></div>
-                    <input class="input_name hidden" type="text" placeholder="Введите имя...">
-                    <div class="sort_by_age sort_item "><span>Возраст</span></div>
+                    <div class="sort_by_id sort_item checked"><span id="id" >ID</span></div>
+                <div class="sort_by_name sort_item  "><span id="name" text="name" ></span></div>
+                <input class="input_name hidden" type="text" placeholder="Введите имя...">
+                    <div class="sort_by_age sort_item "><span id="age" text="age"></span></div>
                 </div>
                 <div class="sort_by_asc_desc">
-                    <div class="sort_by_ascending checked"><span>По возрастанию</span></div>
-                    <div class="sort_by_descending"><span>По убыванию</span></div>
+                    <div class="sort_by_ascending checked"><span text="ascending" id="asc"></span></div>
+                    <div class="sort_by_descending"><span text="descending" id="desc"></span></div>
                 </div>
             </div>
             <div class="appearance">
-                <span class="header_title">Вид</span>
+                <span class="header_title" text="appearance"></span>
                 <div class="appearance_table">
-                    <div onclick="getTableData()" class="table_view appearance_item checked"><span>Таблица</span></div>
-                    <div onclick="getPreviewData()" class="preview appearance_item"><span>Превью</span></div>
+                    <div  class="table_view appearance_item checked"><span text="table" id="table"></span></div>
+                    <div  class="preview appearance_item"><span text="preview" id="preview"></span></div>
                 </div>
+            </div>
+            <div>
+                <input id="lang" type='checkbox' onclick="changeLagnuage()">
+                <label for="lang" class="rus">RUS</label>
+                <label for="lang" class="eng">ENG</label>
             </div>
         </div>
         <!-- section table -->
@@ -195,6 +200,7 @@
 
     </div>
 
+    <script src="script.js" defer></script>
 </body>
 
 </html>
